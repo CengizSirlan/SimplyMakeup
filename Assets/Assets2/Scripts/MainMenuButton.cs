@@ -6,7 +6,6 @@ public class MainMenuButton : MonoBehaviour
 {
     public float vectorx;
     public GameObject blackButton;
-    public GameObject otherButton;
 
     public void Update()
     {
@@ -19,19 +18,6 @@ public class MainMenuButton : MonoBehaviour
             if(blackButton != null)
             {
                 StartCoroutine(blackButton.GetComponent<BlackButton>().blackout());
-            }
-
-            if(otherButton != null)
-            {
-                if (otherButton.activeSelf)
-                {
-
-                    otherButton.GetComponent<Profile>().disappear();
-                }
-                else
-                {
-                    otherButton.GetComponent<Profile>().appear();
-                }
             }
         }
     }
